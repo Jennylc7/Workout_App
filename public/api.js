@@ -2,6 +2,7 @@ const API = {
   async getLastWorkout() {
     let res;
     try {
+      //the problem is here on line 6
       res = await fetch("/api/workouts");
     } catch (err) {
       console.log(err)

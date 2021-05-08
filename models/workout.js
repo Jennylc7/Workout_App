@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const WorkoutSchema = new Schema({
+ 
   exercises: [
     {
       type: {
@@ -38,6 +39,9 @@ const WorkoutSchema = new Schema({
       },
     },
   ],
+},{
+  // Automatically create timestamps for each document
+  timestamps: true, // creates a createdAt & updatedAt for each document
 });
 
 const Workout = mongoose.model("Workout", WorkoutSchema);
